@@ -22,3 +22,17 @@ void Machine::store_3(Instructions s)
 
     memory[s.index_1M][s.index_2M] = Register[s.index_R];
 }
+
+void Machine::move_4(Instructions s)
+{
+    int temp = 0;
+
+    temp = Register[s.index_1M];
+    Register[s.index_1M] = Register[s.index_2M];
+    Register[s.index_2M] = temp;
+}
+
+int Machine::exit_C(Instructions s)
+{
+    return 0;
+}
