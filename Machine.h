@@ -16,12 +16,11 @@ class Machine
         void load_1(Instructions s);
         void load_2(Instructions s);
         void store_3(Instructions s);
-        void print_3();
-        void move_4();
+        void move_4(Instructions s);
         int add_5();
         double add_6();
         void jump_B();
-        void exit_C();
+        int exit_C(Instructions s);
 
 
 };
