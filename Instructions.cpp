@@ -3,6 +3,7 @@
 void Instructions::set_data(string s)
 {
 	
+    decimal_number = 0;
 	for (int i = 0; i < s.size(); i++)
 	{
 		int num = 0;
@@ -25,5 +26,6 @@ void Instructions::set_data(string s)
 			index_2M = num;
 			decimal_number += num;
 		}
+        
 	}
 }
