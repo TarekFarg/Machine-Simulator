@@ -2,39 +2,48 @@
 //
 
 #include <iostream>
-#include "Instructions.h"
 #include <vector>
-using namespace std;
+//#include "Instructions.h"
+#include"machine.h"
+//using namespace std;
 
 int main()
 {
     int n;    // number of instructions
     cin >> n;
-    vector<Instructions> the_instructions; // to store the instructions 
+
+    Machine mac;
+    
     Instructions a;
+    vector<Instructions> the_instructions; // to store the instructions 
+    
     string s;
+    
     // store the instructons
     for (int i = 0; i < n; i++)
     {
         cin >> s; 
         a.set_data(s);
         the_instructions.push_back(a);
+
+        //cout << the_instructions[i].process_number << " " << the_instructions[i].index_R << " " << the_instructions[i].index_1M << "/" << the_instructions[i].index_2M << "   " << the_instructions[i].decimal_number << endl;
     }
 
-    // loop over the instructions and do it
+
+    // loop over the instructions and apply them
     for (int i = 0; i < n; i++)
     {
         int process = the_instructions[i].process_number;
         switch (process)
         {
         case 1:
-            //do
+            mac.load_1(the_instructions[i]);
             break;
         case 2:
-            //do
+            mac.load_2(the_instructions[i]);
             break;
         case 3:
-            //do
+            mac.store_3(the_instructions[i]);
             break;
         case 4:
             //do
@@ -51,7 +60,7 @@ int main()
         default:
             break;
         }
+        //cout << mac.Register[the_instructions[i].index_R] << " ";
     }
+
 }
-
-
