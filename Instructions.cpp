@@ -3,7 +3,7 @@
 void Instructions::set_data(string s)
 {
 	
-    decimal_number = 0;
+    	decimal_number = 0;
 	for (int i = 0; i < s.size(); i++)
 	{
 		int num = 0;
