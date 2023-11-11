@@ -46,7 +46,7 @@ int main()
             mac.store_3(the_instructions[i]);
             break;
         case 4:
-            //do
+            mac.move_4(the_instructions[i]);
             break;
         case 5:
             //do
@@ -57,7 +57,8 @@ int main()
         case 7:
             //do
             break;
-        default:
+        case 8:
+            return mac.exit_C(the_instructions[i]);
             break;
         }
         //cout << mac.Register[the_instructions[i].index_R] << " ";
