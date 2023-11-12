@@ -1,7 +1,8 @@
-//#pragma once
-//#ifndef inst
-//#define inst
-#include <string> 
+#ifndef INSTRUCTIONS_H
+#define INSTRUCTIONS_H
+
+
+#include <string>
 using namespace std;
 
 class Instructions
@@ -11,7 +12,7 @@ class Instructions
         int index_R;				// the index for the register
         int index_1M , index_2M;	// the index for the memory
         int decimal_number = 0;		//convert xy to decimal and store it here
-        void set_data(string s);	// to conver the string to the instruction data 
+        void set_data(string s);	// to conver the string to the instruction data
 };
 
-//#endif inst
+#endif // INSTRUCTIONS_H

@@ -34,9 +34,12 @@ void Machine::move_4(Instructions s)
 
 int Machine::jump_B(Instructions s)
 {
-    return s.decimal_number;   
+    return s.decimal_number;
 }
-
+void Machine::add_5(Instructions s)
+{
+  Register[s.index_R]=  Register[s.index_1M]+  Register[s.index_2M];
+}
 int Machine::exit_C(Instructions s)
 {
     return 0;

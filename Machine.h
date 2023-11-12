@@ -17,8 +17,7 @@ class Machine
         void load_2(Instructions s);
         void store_3(Instructions s);
         void move_4(Instructions s);
-        int add_5();
-        //double add_6();
+        void add_5(Instructions s);
         int jump_B(Instructions s);
         int exit_C(Instructions s);
 

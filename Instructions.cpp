@@ -2,7 +2,7 @@
 
 void Instructions::set_data(string s)
 {
-	
+
     	decimal_number = 0;
 	for (int i = 0; i < s.size(); i++)
 	{
@@ -11,7 +11,7 @@ void Instructions::set_data(string s)
 			num = s[i] - '0';        // covert char to int
 		else
 			num = s[i] - 'A' + 10;  // A=10 , B=11 , c=12 ................
-		
+
 		if (i == 0)
 			process_number = num;
 		else if (i == 1)
@@ -26,6 +26,6 @@ void Instructions::set_data(string s)
 			index_2M = num;
 			decimal_number += num;
 		}
-        
+
 	}
 }
