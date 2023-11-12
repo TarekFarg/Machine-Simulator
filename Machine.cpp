@@ -32,6 +32,11 @@ void Machine::move_4(Instructions s)
     Register[s.index_2M] = temp;
 }
 
+int Machine::jump_B(Instructions s)
+{
+    return s.decimal_number;   
+}
+
 int Machine::exit_C(Instructions s)
 {
     return 0;
