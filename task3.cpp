@@ -10,8 +10,14 @@ using namespace std;
 
 int main()
 {
+    string file;
 
-    ifstream in("input.txt");     // this file have the instructions
+    cout << "Please enter file name: ";
+    cin >> file;
+
+    file += ".txt";
+
+    ifstream in(file);     // this file have the instructions
 
     Instructions a;
     vector<Instructions> the_instructions; // to store the instructions here
