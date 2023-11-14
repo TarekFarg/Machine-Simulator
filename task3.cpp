@@ -65,12 +65,7 @@ int main()
              mac.add_5(the_instructions[i]);
             break;
         case 11:
-            if (mac.Register[the_instructions[i].index_R] == mac.Register[0])
-            {
-                i = mac.jump_B(the_instructions[i]);
-            }
-            else
-                continue;
+                i = mac.jump_B(the_instructions[i], i);
             break;
         case 12:
             return mac.exit_C(the_instructions[i]);
